@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Techpartners</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!--Google Icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0" />
+
+    <!-- Menu-nii profile deer darval unaj ireh heseg -->
+    <script type="module" src="js/menu-profile-drop.js"></script>
+
+    <!-- Header component -->
+    <script type="module" src="components/header.js"></script>
+    <script type="module" src="components/header-profile-drop.js"></script>
+
+    <!-- Post component -->
+    <script type="module" src="components/post.js"></script>
+
+    <!-- Zarlal component -->
+    <script type="module" src="components/zarlal.js"></script>
+
+    <!-- Clap component -->
+    <script type="module" src="components/clap.js"></script>
+
+    <!-- User profile component -->
+    <script type="module" src="components/user-profile.js"></script>
+
     
+</head>
+
+<body>
+
+    <!-- Header - menu -->
+    <cus-header>
+        <script src="js/menu-profile-drop.js"></script>
+    </cus-header>
+    
+
+    <!-- Main heseg -->
+    <main>
+
+        <!-- Niitleliin heseg -->
+       <cus-post></cus-post>
+
+        <!-- Zarlaliin heseg -->
+        <div class="zarlal">
+
+            <!-- Zarlal -->
+            <cus-zarlal></cus-zarlal>
+
+            <!-- Busad hereglegchdiin heseg -->
+            <script src="json-component/other-user.js"></script>
+            <div class="other-users" id="user">
+                <script src="json-component/other-user-json.js"></script>
+
+                <script>
+                    const user_app = new App("user");
+                    user_app.init();
+
+                </script>
+
+            </div>
+
+            <!-- Upgrade button -->
+            <button>Upgrade</button>
+        </div>
+
+        <!-- Clap response heseg -->
+        <cus-clap></cus-clap>
+
+    
+        <!-- Niitlegchiin profile-nii heseg -->
+        <cus-userprofile></cus-userprofile>
+
+        <!-- Niitlegchiin busad heseg -->
+        <h3 class="n-garchig">More from Elye - A One Eye Developer</h3>
+        <div class="busad" id="busad">
+
+            <!-- Niitlegchiin busad niitleluud -->
+            <script src="json-js/other-post-json.js"></script>
+            <script>
+                const p_App = new postApp("busad");
+                p_App.init();
+            </script> 
+
+        </div>
+    </main>
+
+
 </body>
 </html>
